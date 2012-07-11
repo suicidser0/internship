@@ -8,8 +8,6 @@ from nav_msgs.msg import Odometry
 from kobuki_comms.msg import BumperEvent
 from kobuki_comms.msg import Sound
 
-from internship.msg import Num
-
 class Test_Translation:
 	# constructor
 	def __init__(self):
@@ -21,7 +19,6 @@ class Test_Translation:
 	# initialize params
 	def _init_params(self):
 		
-		self.num = Num()
 		self.twist = Twist()
 
 		self.last_odom = 0
