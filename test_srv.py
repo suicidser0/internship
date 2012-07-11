@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+
 import roslib; roslib.load_manifest('begin_py')
 import rospy
 import sys 
