@@ -13,10 +13,10 @@ int main(int argc, char** argv)
 	
 	internship::Num a;
 	a.age = 10;
-	
-	pub.publish(a);
-
-	ros::spin();
+	while(ros::ok())
+	{
+		pub.publish(a);		
+	}
 	
 	return 0;
 }
