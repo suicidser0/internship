@@ -40,7 +40,7 @@ class Draw_square:
 			self.last_imu_data = self.imu_data
 			self.imu_count = self.imu_count + 1
 
-#		print "angle : %.4f"%self.imu_data
+		#print "angle : %.4f"%self.imu_data
 
 	def OdomInfoCallback(self, data):
 		self.odom_data_x = data.pose.pose.position.x
@@ -58,7 +58,7 @@ class Draw_square:
 		if self.goal_state == True:
 			goal_x = math.cos(self.theta) + self.last_odom_data_x
 			goal_y = math.sin(self.theta) + self.last_odom_data_y
-			goal_state = False
+			self.goal_state = False
 	
 			print "goal_x: %.4f goal_y: %.4f odom_x: %.4f odom_y:%.4f theta: %d"%(goal_x, goal_y, self.odom_data_x, self.odom_data_y, self.theta)
 
@@ -75,7 +75,7 @@ class Draw_square:
 			self.cmd_vel_pub.publish(twist)
 			print "stop"
 			rospy.sleep(2)
-	#			print "last angle : %.4f angle %.4f"%(self.last_imu_data, self.imu_data)
+			#print "last angle : %.4f angle %.4f"%(self.last_imu_data, self.imu_data)
 		 	while not  math.fabs(self.last_imu_data - self.imu_data) >= 90:
 				print "rotation"
 				twist.angular.z = 0.3
