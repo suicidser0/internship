@@ -1,0 +1,15 @@
+<package>
+  <description brief="minsu_git">
+
+     minsu_git
+
+  </description>
+  <author>Control Team Laptop</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/minsu_git</url>
+  <depend package="roscpp"/>
+
+</package>
+
+
