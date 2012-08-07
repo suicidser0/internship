@@ -1,0 +1,8 @@
+<launch>
+
+	<include file = "$(find kobuki_node)/test_getYaw.launch"/>
+
+	<node name = "draw_square_kobuki" pkg = "minsu_apps" type = "draw_square.py" output = "screen">
+		<remap from ="angle" to = "/mobile_base/sensors/gyro/angle"/>
+	</node>
+</launch>
